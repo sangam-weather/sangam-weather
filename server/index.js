@@ -1,5 +1,4 @@
 import express from 'express';
-import fs from 'fs';
 import getWeather from './openWeather.js';
 import getRestaurant from './restaurant.js';
 
