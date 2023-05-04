@@ -4,6 +4,8 @@
     const result = await (await fetch('/weather')).json();
     const weatherIcon = document.createElement('img');
     weatherIcon.src = './src/public/img/weather/' + result.icon + '.png';
+    weatherIcon.alt = '날씨 아이콘';
+
     weatherIcon.classList.add('image-thumbnail');
     document.querySelector('.image-box').prepend(weatherIcon);
     document.getElementById('temperature-box').innerText = Math.ceil(result.temp);

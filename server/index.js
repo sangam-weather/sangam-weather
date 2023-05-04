@@ -1,11 +1,11 @@
 import express from 'express';
 import fs from 'fs';
-import weather from './openWeather.js';
+import getWeather from './openWeather.js';
+import getRestaurant from './restaurant.js';
 import cors from 'cors';
 
 export const app = express();
 const port = 3000;
-const restaurantList = JSON.parse(fs.readFileSync('restaurant.json'));
 
 const options = {
   origin: '*', // 접근 권한을 부여하는 도메인
@@ -21,13 +21,8 @@ app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
 
-app.get('/restaurantInfo', (req, res) => {
-  if (req.method === 'GET') {
-    res.status(200).json(restaurantList);
-  }
-});
-
-weather(app);
+getRestaurant(app);
+getWeather(app);
 
 app.listen(port, () => {
   console.log(`
