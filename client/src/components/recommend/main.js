@@ -42,7 +42,14 @@ const recommendRestaurant = async (temp, isRain) => {
     });
   } else if (isRain) {
     filtteredArray = filtteredArray.filter(list => {
-      if (list.name.includes('칼국수') || list.name.includes('김치')) {
+      if (
+        list.name.includes('칼국수') ||
+        list.name.includes('김치') ||
+        list.name.includes('탄탄면') ||
+        list.name.includes('짜글이') ||
+        list.name.includes('상암회관') ||
+        list.name.includes('찌개')
+      ) {
         return list;
       }
     });
