@@ -34,6 +34,10 @@ sangam-weather
    └─ restaurant.json
 ```
 
+## 유효성 검사 결과
+
+![image](https://user-images.githubusercontent.com/122027452/236105662-e1b7dbaa-3b5e-4e94-be1c-ddf10c03ff2e.png)
+
 ## Used Stack
 
  <img src="https://img.shields.io/badge/HTML5-E34F26" >
