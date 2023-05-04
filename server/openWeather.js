@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
-dotenv.config({ path: '../.env' }); //process.env.API_KEY
 import fetch from 'node-fetch';
+
+dotenv.config({ path: '../.env' }); //process.env.API_KEY
 
 const weather = app => {
   app.get('/weather', async (req, res) => {

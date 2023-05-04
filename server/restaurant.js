@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import fs from 'fs';
 
 const restaurantList = JSON.parse(fs.readFileSync('restaurant.json'));
